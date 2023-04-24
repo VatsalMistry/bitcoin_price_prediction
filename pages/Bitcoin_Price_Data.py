@@ -29,20 +29,20 @@ st.title("Bitcoin Price Data")
 btc_img = Image.open("Images/bitcoin.png")
 
 # Define function to get Bitcoin price from Binance API
-def get_live_bitcoin_price():
-    url = "https://api.binance.com/api/v3/ticker/price"
-    params = {
-        "symbol": "BTCUSDT"
-    }
-    response = requests.get(url, params=params)
-    return float(response.json()["price"])
+# def get_live_bitcoin_price():
+#     url = "https://api.binance.com/api/v3/ticker/price"
+#     params = {
+#         "symbol": "BTCUSDT"
+#     }
+#     response = requests.get(url, params=params)
+#     return float(response.json()["price"])
 
 # Display Bitcoin image and price side by side
 col1, col2 = st.columns(2)
 with col1:
     st.image(btc_img, width=150)
-with col2:
-    st.title(f"Bitcoin Current Price: ${get_live_bitcoin_price()}")
+# with col2:
+#     st.title(f"Bitcoin Current Price: ${get_live_bitcoin_price()}")
 
 def get_bitcoin_price():
     # Get Bitcoin price data from Yahoo Finance in USD with daily frequency
